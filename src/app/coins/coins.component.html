@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Coins List</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Coin Name</th>
+        <th>Coin Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let coin of (coins$ | async)">
+        <td>{{coin.name}}</td>
+        <td>{{coin.price}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

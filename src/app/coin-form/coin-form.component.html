@@ -1,0 +1,16 @@
+<div class="container">
+    <h1>Coin Form</h1>
+    <form (ngSubmit)="onSubmit()" #coinForm="ngForm">
+        <div class="form-group">
+            <label for="name">Coin Name</label>
+            <input type="text" class="form-control" id="name" name="name" [(ngModel)]="coin.name" required>
+        </div>
+        <div class="form-group">
+            <label for="price">Coin Name</label>
+            <input type="number" class="form-control" id="price" name="price" [(ngModel)]="coin.price" required>
+        </div>
+
+        <button type="submit" class="btn btn-success" [disabled]="!coinForm.form.valid">Submit</button>
+
+    </form>
+</div>
